@@ -1,6 +1,6 @@
 # Hit-or-Fall
 ## Game theme: delay the inevitable
-### initial idea:
+### Initial idea:
 <p>An object (could be anything) is falling to the ground, where the player is located (i.e. a plane). <br>
 If the player is crushed by said object, the game is over. <br>
 In order to avoid this, the player has to do: <br>
