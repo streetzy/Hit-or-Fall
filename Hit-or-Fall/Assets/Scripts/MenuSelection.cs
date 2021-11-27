@@ -32,4 +32,10 @@ public class MenuSelection : MonoBehaviour
         menus.Clear();
     }
 
+    public void Exit()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
+        // Application.Quit();
+    }
+
 }
