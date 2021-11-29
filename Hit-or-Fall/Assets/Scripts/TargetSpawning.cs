@@ -7,7 +7,7 @@ public class TargetSpawning : MonoBehaviour
     private float xAxis;
     private float yAxis;
     private float zAxis;
-    private int spawnTime;
+    public int spawnTime;
     private int randomTarget;
     private Vector3 spawnPosition;
     private List<GameObject> targets = new List<GameObject>();
@@ -29,11 +29,10 @@ public class TargetSpawning : MonoBehaviour
     // Assign random values with specific ranges to positional and time variables.
     void Update()
     {
-        xAxis = UnityEngine.Random.Range(-4, 4);
-        yAxis = UnityEngine.Random.Range(2, 5);
-        zAxis = UnityEngine.Random.Range(-5, 15);
-        randomTarget = UnityEngine.Random.Range(0, 2);
-        spawnTime = UnityEngine.Random.Range(2, 5);
+        xAxis = Random.Range(-4, 5);
+        yAxis = Random.Range(2, 6);
+        zAxis = Random.Range(-5, 16);
+        randomTarget = Random.Range(0, 3);
         spawnPosition = new Vector3(xAxis, yAxis, zAxis);
     }
 

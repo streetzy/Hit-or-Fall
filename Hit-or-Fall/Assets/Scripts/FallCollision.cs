@@ -14,8 +14,6 @@ public class FallCollision : MonoBehaviour
             game.SetActive(false);
             mainMenu.SetActive(true);
         }
-
-
     }
 
 }
