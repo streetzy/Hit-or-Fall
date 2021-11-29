@@ -7,6 +7,9 @@ TagManager:
   - FallingObject
   - Target
   - Enemy Manager
+  - Large
+  - Mid
+  - Small
   layers:
   - Default
   - TransparentFX
