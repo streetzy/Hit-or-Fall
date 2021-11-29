@@ -9,7 +9,10 @@ public class MenuSelection : MonoBehaviour
     public GameObject scoreboard;
     public GameObject menuManager;
     public GameObject game;
-    //private GameObject[] targetArr;
+    public GameObject enemyManager;
+    public GameObject fallingObject;
+    private GameObject child;
+
 
     void Awake()
     {
@@ -19,14 +22,14 @@ public class MenuSelection : MonoBehaviour
 
     public void BeginGame()
     {
+        fallingObject.transform.position = new Vector3(0, 100, 0);
         menuManager.SetActive(false);
         game.SetActive(true);
-
-        //targetArr = GameObject.FindGameObjectsWithTag("Target");
-        //foreach (GameObject target in targetArr)
-        //{
-        //    Destroy(target);
-        //} This part of the code doesn't work, recheck it later.
+        for (int i = 0; i < enemyManager.transform.childCount ; i++ )
+        {
+            child = enemyManager.transform.GetChild(i).gameObject;
+            Destroy(child);
+        }
     }
 
     public void ScoreboardMenu()

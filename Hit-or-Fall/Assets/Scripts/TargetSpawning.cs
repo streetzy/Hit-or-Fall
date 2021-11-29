@@ -18,7 +18,7 @@ public class TargetSpawning : MonoBehaviour
     public GameObject smallTarget;
 
     // Adding targets to the target list, mainly for random target, and then starting a coroutine which spawns targets.
-    private void Start()
+    private void OnEnable()
     {
         targets.Add(largeTarget);
         targets.Add(target);
@@ -29,8 +29,8 @@ public class TargetSpawning : MonoBehaviour
     // Assign random values with specific ranges to positional and time variables.
     void Update()
     {
-        xAxis = UnityEngine.Random.Range(-3, 3);
-        yAxis = UnityEngine.Random.Range(0, 3);
+        xAxis = UnityEngine.Random.Range(-4, 4);
+        yAxis = UnityEngine.Random.Range(2, 5);
         zAxis = UnityEngine.Random.Range(-5, 15);
         randomTarget = UnityEngine.Random.Range(0, 2);
         spawnTime = UnityEngine.Random.Range(2, 5);
