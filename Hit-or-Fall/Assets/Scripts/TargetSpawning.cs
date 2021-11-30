@@ -26,6 +26,7 @@ public class TargetSpawning : MonoBehaviour
         StartCoroutine(SpawnTargets());
     }
 
+
     // Assign random values with specific ranges to positional and time variables.
     void Update()
     {

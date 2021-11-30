@@ -10,6 +10,7 @@ TagManager:
   - Large
   - Mid
   - Small
+  - Game
   layers:
   - Default
   - TransparentFX
