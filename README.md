@@ -20,3 +20,5 @@ Scoring would work like this:
 <ol>Small target: 1 point</ol>
 <ol>Enemy target: -3 points</ol>
 </p>
+
+dead repo? wtf?! *dies of cringe*
