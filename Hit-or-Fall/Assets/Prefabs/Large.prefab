@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 4415551716737247099}
   - component: {fileID: 4284538804465151886}
   - component: {fileID: 2180142623319623206}
-  - component: {fileID: 8923055132499597854}
   - component: {fileID: -1611913063734579970}
-  - component: {fileID: 4519590396778943900}
+  - component: {fileID: 6865287788899326119}
   - component: {fileID: 1337772578296941461}
   m_Layer: 0
   m_Name: Large
@@ -100,18 +99,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8923055132499597854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465442874745242667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 483d29435814bbd42925b3fcdf2378ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-1611913063734579970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a24200c5bb9ff7418d5337fcfc940f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4519590396778943900
+--- !u!114 &6865287788899326119
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,8 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 752415ea4c78f1d40bf4060776e6d9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTime: {fileID: 0}
-  enemyManager: {fileID: 0}
 --- !u!54 &1337772578296941461
 Rigidbody:
   m_ObjectHideFlags: 0

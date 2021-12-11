@@ -4,41 +4,30 @@ using UnityEngine;
 
 public class TargetMovement : MonoBehaviour
 {
-    private GameTime gameTime;
-    private Rigidbody targetRigidbody;
-    private GameObject target;
-    private float incrementCoordinate;
-    
 
+    // Get the rigidbody on the gameObject (in this case: target) and assign its velocity a vector3 with its z axis being updatedSpeed from TargetVelocity.
+    private Rigidbody targetRigidbody;
     private void Start()
     {
-        gameTime = GameObject.FindGameObjectWithTag("Game").gameObject.GetComponent<GameTime>();
-
-        target = gameObject;
-
-        targetRigidbody = target.GetComponent<Rigidbody>();
-        targetRigidbody.velocity = new Vector3(0, 0, -3);
-
-        incrementCoordinate = 0;
+        targetRigidbody = gameObject.GetComponent<Rigidbody>();
+        targetRigidbody.velocity = new Vector3(0, 0, TargetVelocity.updatedSpeed);
     }
 
+
+    // Update calls OutOfBounds
     private void Update()
     {
-        if (gameObject.transform.position.z <= -15f)
-        {
-            Destroy(gameObject);
-        }
-
-
-
-        if (gameTime.time >= 10 && incrementCoordinate <= -15)
-        {
-            incrementCoordinate -= 3;
-            gameTime.time = 0;
-            targetRigidbody.velocity = new Vector3(0, 0, targetRigidbody.velocity.z + incrementCoordinate);
-        }
+        OutOfBounds();
     }
 
-    //Main idea for this script is to create Target Movement by itself, and then slowly change the vel. over time.
+    //If the gameObject's z Axis exceeds -15, it gets destroyed, and the falling object's y position gets lowered.
+    private void OutOfBounds()
+    {
+        if(gameObject.transform.position.z <= -15f)
+        {
+            Destroy(gameObject);
+            TargetCollision.fallingObject.transform.position = new Vector3(0, TargetCollision.fallingObject.transform.position.y - 15, 0);
+        }
+    }
 
 }

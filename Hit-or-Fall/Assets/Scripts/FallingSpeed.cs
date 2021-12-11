@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FallingSpeed : MonoBehaviour
 {
+    // Setting the fallingObject's velocity
+
     public Rigidbody fallingObject;
 
     void Update()
