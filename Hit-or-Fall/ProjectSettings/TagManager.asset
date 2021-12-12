@@ -11,6 +11,9 @@ TagManager:
   - Mid
   - Small
   - Game
+  - Score Number
+  - Main Menu
+  - Menu
   layers:
   - Default
   - TransparentFX

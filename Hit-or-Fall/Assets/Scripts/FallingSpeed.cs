@@ -6,10 +6,15 @@ public class FallingSpeed : MonoBehaviour
 {
     // Setting the fallingObject's velocity
 
-    public Rigidbody fallingObject;
+    public Rigidbody fallingObjectRigid;
+    public MenuSelection menuSelection;
 
     void Update()
     {
-        fallingObject.velocity = new Vector3(0f, -10f, 0f);
+        fallingObjectRigid.velocity = new Vector3(0f, -10f, 0f);
+        if (fallingObjectRigid.transform.position.y < 1)
+        {
+            menuSelection.MainMenu();
+        }
     }
 }

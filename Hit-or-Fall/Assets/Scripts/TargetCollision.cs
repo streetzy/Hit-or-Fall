@@ -25,12 +25,15 @@ public class TargetCollision : MonoBehaviour
         {
             case "Large":
                 fallObjPosition.y += 15;
+                PlayerScore.scoreNumber += 15f;
                 break;
             case "Mid":
                 fallObjPosition.y += 30;
+                PlayerScore.scoreNumber += 30f;
                 break;
             case "Small":
                 fallObjPosition.y += 50;
+                PlayerScore.scoreNumber += 50f;
                 break;
         }
 
