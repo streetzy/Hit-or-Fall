@@ -7,7 +7,7 @@ public class MenuSelection : MonoBehaviour
 {
     public static List<float> scoreList = new List<float>() {0, 0, 0};
     public List<TMP_Text> scores = new List<TMP_Text>();
-    private List<GameObject> menus = new List<GameObject>();
+    public static List<GameObject> menus = new List<GameObject>();
     public GameObject mainMenu;
     public GameObject scoreboard;
     public GameObject menuManager;
@@ -16,18 +16,19 @@ public class MenuSelection : MonoBehaviour
     public GameObject fallingObject;
     private GameObject child;
     public TargetSpawning targetSpawning;
+    public FreezeGame freezeGame;
 
 
 
     // Once the script is being loaded, set the game's activity in the hierarchy to false, while setting the menu manager's activity to true.
     void Awake()
     {
-        menuManager.SetActive(true);
         MainMenu();
     }
 
     public void MainMenu()
     {
+        freezeGame.pauseMenu.SetActive(false);
         game.SetActive(false);
         menuManager.SetActive(true);
     }
@@ -35,7 +36,8 @@ public class MenuSelection : MonoBehaviour
     // Sets the falling object's y position to 100, and sets game's activity to true (menu to false), then destroy's all enemies that were still loaded in from the previous playthrough.
     // Starts the coroutine (spawning targets) from target spawning.
     public void BeginGame()
-    { 
+    {
+        Time.timeScale = 1f;
         fallingObject.transform.position = new Vector3(0, 100, 0);
         menuManager.SetActive(false);
         game.SetActive(true);

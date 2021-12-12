@@ -25,7 +25,7 @@ public class PlayerScore : MonoBehaviour
 
     void OnDisable()
     {
-        MenuSelection.scoreList.Insert(0, float.Parse(score.text));
+        if (Time.timeScale == 1) { MenuSelection.scoreList.Insert(0, float.Parse(score.text)); }
     }
 
 }
